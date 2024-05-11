@@ -8,8 +8,14 @@ function Calculator() {
     setExp(exp+e.target.innerText)
   }
   const evaluateExp = () => {
-    setAnswer(eval(exp));
+    if(exp[exp.length-1] !== "+" && exp[exp.length-1] !== "-" && exp[exp.length-1] !== "*" && exp[exp.length-1] !== "/"){
+        setAnswer(eval(exp));
+        setExp("");
+    }
+  }
+  const clearExp = () => {
     setExp("");
+    setAnswer("");
   }
   return (
     <div style={{
@@ -61,7 +67,7 @@ function Calculator() {
             justifyContent: "space-between",
             marginBottom: "12px"
         }}>
-            <button onClick={handleClick}>C</button>
+            <button onClick={clearExp}>C</button>
             <button onClick={handleClick}>0</button>
             <button onClick={evaluateExp}>=</button>
             <button onClick={handleClick}>/</button>
