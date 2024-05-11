@@ -8,8 +8,16 @@ function Calculator() {
     setExp(exp+e.target.innerText)
   }
   const evaluateExp = () => {
+    if(!exp.length){
+        setAnswer("ERROR");
+        return;
+    }
     if(exp[exp.length-1] !== "+" && exp[exp.length-1] !== "-" && exp[exp.length-1] !== "*" && exp[exp.length-1] !== "/"){
         setAnswer(eval(exp));
+        setExp("");
+    }
+    else {
+        setAnswer("ERROR");
         setExp("");
     }
   }
