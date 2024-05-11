@@ -9,7 +9,7 @@ function Calculator() {
   }
   const evaluateExp = () => {
     if(!exp.length){
-        setAnswer("ERROR");
+        setAnswer("Error");
         return;
     }
     if(exp[exp.length-1] !== "+" && exp[exp.length-1] !== "-" && exp[exp.length-1] !== "*" && exp[exp.length-1] !== "/"){
@@ -17,7 +17,7 @@ function Calculator() {
         setExp("");
     }
     else {
-        setAnswer("ERROR");
+        setAnswer("Error");
         setExp("");
     }
   }
