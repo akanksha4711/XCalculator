@@ -19,7 +19,7 @@ function Calculator() {
         alignItems: 'center'
     }}>
       <h1>React Calculator</h1>
-      <input value={exp} style={{marginBottom:"10px"}} />
+      <input type="text" value={exp} style={{marginBottom:"10px"}} />
       <div style={{marginBottom:"10px"}}>{answer}</div>
       <div>
         <div style={{
